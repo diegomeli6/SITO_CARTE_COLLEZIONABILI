@@ -38,3 +38,20 @@ document.addEventListener('click', e => {
     );
   }
 });
+
+// Toggles the mobile menu open/closed on hamburger click.
+const hamburger = document.getElementById('navbar-hamburger');
+if (hamburger) {
+  hamburger.addEventListener('click', () => {
+    const isOpen = navbar.classList.toggle('navbar--menu-open');
+    hamburger.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  // Close mobile menu when any link inside it is clicked.
+  document.querySelectorAll('.navbar__mobile-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      navbar.classList.remove('navbar--menu-open');
+      hamburger.setAttribute('aria-expanded', 'false');
+    });
+  });
+}
