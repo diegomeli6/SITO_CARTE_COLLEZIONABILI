@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carte da Collezione — Il Mondo in Miniatura</title>
+  <meta name="description" content="Esplora il mondo delle carte da collezione: scopri come vengono prodotte, le finiture speciali e gli universi di Pokémon, Magic, Yūgiōh e molto altro.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════ NAVBAR -->
+  <nav class="navbar" id="navbar" aria-label="Navigazione principale">
+    <div class="navbar__container">
+      <a href="index.html" class="navbar__logo" aria-label="Torna alla home">Carte da Collezione</a>
+      <div class="navbar__menu">
+
+        <div class="navbar__dropdown">
+          <button class="navbar__dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+            Processo Tecnico
+          </button>
+          <div class="navbar__dropdown-menu">
+            <a href="technical/making-of.html">Making Of</a>
+            <a href="technical/special-finishes.html">Finiture Speciali</a>
+            <a href="technical/card-anatomy.html">Anatomia della Carta</a>
+          </div>
+        </div>
+
+        <div class="navbar__dropdown">
+          <button class="navbar__dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+            Universi
+          </button>
+          <div class="navbar__dropdown-menu">
+            <a href="universes/pokemon.html">Pokémon</a>
+            <a href="universes/magic.html">Magic: The Gathering</a>
+            <a href="universes/yugioh.html">Yūgiōh</a>
+            <a href="universes/sport.html">Sport Cards</a>
+            <a href="universes/cuphead.html">Cuphead</a>
+          </div>
+        </div>
+
+        <a href="gallery.html" class="navbar__cta">Galleria</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ═══════════════════════════════════════════════ HERO -->
+    <section class="hero" aria-label="Intestazione principale">
+      <video
+        class="hero__video"
+        autoplay muted loop playsinline
+        aria-hidden="true"
+        poster="assets/video/hero-poster.jpg"
+      >
+        <source src="assets/video/hero.mp4" type="video/mp4">
+      </video>
+      <div class="hero__overlay" aria-hidden="true"></div>
+
+      <div class="hero__content">
+        <p class="eyebrow hero__eyebrow">Il Mondo in Miniatura</p>
+        <h1 class="hero__title">Carte da&nbsp;Collezione</h1>
+        <p class="hero__subtitle">
+          Dalla pressa da stampa al campo di gioco. Scopri come nascono, cosa rappresentano e perché alcune valgono più di un'automobile.
+        </p>
+        <div class="hero__actions">
+          <a href="technical/making-of.html" class="btn btn--ghost-light">Come vengono fatte</a>
+          <a href="gallery.html" class="btn btn--gold">Esplora la Galleria</a>
+        </div>
+      </div>
+
+      <div class="hero__scroll" aria-hidden="true">
+        <div class="hero__scroll-line"></div>
+        <span>Scorri</span>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════ ENTRY POINTS -->
+    <section class="home-entries section" aria-labelledby="entries-heading">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="entries-heading">Tre mondi da esplorare</h2>
+          <p>Ogni carta ha una storia tecnica e una storia culturale. Qui le raccontiamo entrambe.</p>
+        </header>
+        <div class="home-entries__grid">
+
+          <a href="technical/making-of.html" class="home-entries__card home-entries__card--teal">
+            <span class="badge badge--teal">Processo Tecnico</span>
+            <h3>Come Nascono le Carte</h3>
+            <p>Dalla selezione della carta alla finitura finale: ogni strato ha un nome, una funzione e un costo produttivo.</p>
+            <span class="home-entries__arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a href="universes/pokemon.html" class="home-entries__card home-entries__card--red">
+            <span class="badge badge--red">Universi</span>
+            <h3>I Mondi delle Carte</h3>
+            <p>Pokémon, Magic, Yūgiōh e molto altro. Community da decine di milioni di persone costruite attorno a rettangoli di carta.</p>
+            <span class="home-entries__arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a href="gallery.html" class="home-entries__card home-entries__card--gold">
+            <span class="badge badge--gold">Galleria</span>
+            <h3>Le Carte più Belle</h3>
+            <p>Una selezione curata delle carte più iconiche, rare e spettacolari. Filtrate per universo o per tecnica di produzione.</p>
+            <span class="home-entries__arrow" aria-hidden="true">→</span>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════ TECHNICAL PREVIEW -->
+    <section class="home-technical section section--surface" aria-labelledby="tech-preview-heading">
+      <div class="container">
+        <div class="split">
+          <div>
+            <header class="section-header">
+              <span class="badge badge--teal">Processo Tecnico</span>
+              <h2 id="tech-preview-heading">Molto più che carta e inchiostro</h2>
+              <p>
+                Una carta da collezione moderna è il risultato di fino a dodici strati di stampa, laminazione e finitura. Ogni scelta produttiva influenza il valore percepito dal collezionista.
+              </p>
+            </header>
+            <a href="technical/special-finishes.html" class="btn btn--teal">Scopri le Finiture Speciali</a>
+          </div>
+
+          <nav class="home-technical__links" aria-label="Pagine della sezione tecnica">
+            <a href="technical/making-of.html" class="home-technical__link">
+              <span class="home-technical__link-text">Making Of — La produzione</span>
+              <span class="home-technical__link-arrow" aria-hidden="true">→</span>
+            </a>
+            <a href="technical/special-finishes.html" class="home-technical__link">
+              <span class="home-technical__link-text">Finiture Speciali — Ologrammi e foil</span>
+              <span class="home-technical__link-arrow" aria-hidden="true">→</span>
+            </a>
+            <a href="technical/card-anatomy.html" class="home-technical__link">
+              <span class="home-technical__link-text">Anatomia della Carta — Strati e struttura</span>
+              <span class="home-technical__link-arrow" aria-hidden="true">→</span>
+            </a>
+          </nav>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════ UNIVERSE PREVIEW -->
+    <section class="home-universes section" aria-labelledby="uni-preview-heading">
+      <div class="container">
+        <div class="split">
+          <header class="section-header">
+            <span class="badge badge--red">Universi</span>
+            <h2 id="uni-preview-heading">Cinque universi, milioni di collezionisti</h2>
+            <p>
+              Ogni franchise ha le proprie carte iconiche, la propria estetica e la propria community. Scegli da dove iniziare.
+            </p>
+            <a href="universes/pokemon.html" class="btn btn--red" style="margin-top: 1.5rem;">Inizia da Pokémon</a>
+          </header>
+
+          <nav class="home-universes__swatches" aria-label="Universi disponibili">
+            <a href="universes/pokemon.html"  class="universe-swatch universe-swatch--pokemon">
+              <span class="universe-swatch__name">Pokémon</span>
+              <span class="universe-swatch__arrow" aria-hidden="true">→</span>
+            </a>
+            <a href="universes/magic.html"    class="universe-swatch universe-swatch--magic">
+              <span class="universe-swatch__name">Magic: The Gathering</span>
+              <span class="universe-swatch__arrow" aria-hidden="true">→</span>
+            </a>
+            <a href="universes/yugioh.html"   class="universe-swatch universe-swatch--yugioh">
+              <span class="universe-swatch__name">Yūgiōh</span>
+              <span class="universe-swatch__arrow" aria-hidden="true">→</span>
+            </a>
+            <a href="universes/sport.html"    class="universe-swatch universe-swatch--sport">
+              <span class="universe-swatch__name">Sport Cards</span>
+              <span class="universe-swatch__arrow" aria-hidden="true">→</span>
+            </a>
+            <a href="universes/cuphead.html"  class="universe-swatch universe-swatch--cuphead">
+              <span class="universe-swatch__name">Cuphead</span>
+              <span class="universe-swatch__arrow" aria-hidden="true">→</span>
+            </a>
+          </nav>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════ GALLERY TEASER -->
+    <section class="home-gallery section section--surface" aria-labelledby="gallery-teaser-heading">
+      <div class="container">
+        <header class="section-header section-header--centered">
+          <span class="badge badge--gold">Galleria</span>
+          <h2 id="gallery-teaser-heading">Carte da ammirare</h2>
+          <p>16 carte selezionate, filtrabili per universo e tecnica. Come sfogliare un raccoglitore molto costoso.</p>
+        </header>
+
+        <!-- Binder preview with 8 placeholder slots -->
+        <div class="binder home-gallery__binder" aria-label="Anteprima raccoglitore">
+          <div class="binder__spine" aria-hidden="true">
+            <div class="binder__ring"></div>
+            <div class="binder__ring"></div>
+            <div class="binder__ring"></div>
+            <div class="binder__ring"></div>
+          </div>
+          <div class="binder__pages" style="grid-template-columns: repeat(4,1fr); grid-template-rows: repeat(2,1fr);">
+            <div class="card-slot card-tint--pokemon" aria-label="Pikachu Illustrator">
+              <img src="assets/cards/pokemon-pikachu-illustrator.jpg" alt="Pikachu Illustrator" loading="lazy">
+            </div>
+            <div class="card-slot card-tint--magic" aria-label="Black Lotus">
+              <img src="assets/cards/magic-black-lotus.jpg" alt="Black Lotus" loading="lazy">
+            </div>
+            <div class="card-slot card-tint--yugioh" aria-label="Drago Bianco Occhi Blu">
+              <img src="assets/universes/yugioh/blue-eyes-white-dragon.jpg" alt="Drago Bianco Occhi Blu" loading="lazy">
+            </div>
+            <div class="card-slot card-tint--sport" aria-label="Carta Sport">
+              <div class="card-slot__placeholder">⚾<span>Sport</span></div>
+            </div>
+            <div class="card-slot card-tint--cuphead" aria-label="Carta Cuphead">
+              <div class="card-slot__placeholder">🎷<span>Cuphead</span></div>
+            </div>
+            <div class="card-slot card-tint--pokemon" aria-label="Charizard Holo Base Set">
+              <img src="assets/cards/pokemon-charizard.jpg" alt="Charizard Holo Base Set" loading="lazy">
+            </div>
+            <div class="card-slot card-tint--magic" aria-label="Mox Sapphire Alpha">
+              <img src="assets/cards/magic-mox-sapphire.jpg" alt="Mox Sapphire Alpha" loading="lazy">
+            </div>
+            <div class="card-slot card-tint--yugioh" aria-label="Dark Magician Secret Rare">
+              <img src="assets/universes/yugioh/dark-magician.jpg" alt="Dark Magician Secret Rare" loading="lazy">
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align:center; margin-top: var(--space-6);">
+          <a href="gallery.html" class="btn btn--gold">Apri la Galleria completa</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════════ FOOTER -->
+  <footer class="footer">
+    <div class="footer__container">
+      <a href="index.html" class="footer__logo" aria-label="Torna alla home">Carte da Collezione</a>
+      <nav class="footer__nav" aria-label="Link del footer">
+        <a href="technical/making-of.html">Processo Tecnico</a>
+        <a href="universes/pokemon.html">Universi</a>
+        <a href="gallery.html">Galleria</a>
+      </nav>
+    </div>
+    <div class="footer__container">
+      <p class="footer__copy">Progetto d'esame — Sito informativo sulle carte da collezione</p>
+    </div>
+  </footer>
+
+  <script src="js/navbar.js"></script>
+  <script src="js/card-modal.js"></script>
+</body>
+</html>

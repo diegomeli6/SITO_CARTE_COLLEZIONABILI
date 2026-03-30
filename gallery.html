@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galleria — Le carte da collezione più iconiche</title>
+  <meta name="description" content="Una selezione di 16 carte iconiche filtrabili per universo e tecnica di produzione. Dal Charizard olografico al Black Lotus, le carte che hanno fatto la storia.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════ NAVBAR -->
+  <nav class="navbar navbar--visible" id="navbar" aria-label="Navigazione principale">
+    <div class="navbar__container">
+      <a href="index.html" class="navbar__logo" aria-label="Torna alla home">Carte da Collezione</a>
+      <div class="navbar__menu">
+
+        <div class="navbar__dropdown">
+          <button class="navbar__dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+            Processo Tecnico
+          </button>
+          <div class="navbar__dropdown-menu">
+            <a href="technical/making-of.html">Making Of</a>
+            <a href="technical/special-finishes.html">Finiture Speciali</a>
+            <a href="technical/card-anatomy.html">Anatomia della Carta</a>
+          </div>
+        </div>
+
+        <div class="navbar__dropdown">
+          <button class="navbar__dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+            Universi
+          </button>
+          <div class="navbar__dropdown-menu">
+            <a href="universes/pokemon.html">Pokémon</a>
+            <a href="universes/magic.html">Magic: The Gathering</a>
+            <a href="universes/yugioh.html">Yūgiōh</a>
+            <a href="universes/sport.html">Sport Cards</a>
+            <a href="universes/cuphead.html">Cuphead</a>
+          </div>
+        </div>
+
+        <a href="gallery.html" class="navbar__cta">Galleria</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ═══════════════════════════════════════════════ GALLERY HEADER -->
+    <div class="gallery-header">
+      <div class="container">
+        <div class="gallery-header__meta">
+          <h1>Galleria</h1>
+          <span class="gallery-header__count" id="gallery-count" aria-live="polite">16 carte</span>
+        </div>
+        <p>Una selezione delle carte più iconiche, rare e significative — organizzata per universo e tecnica di produzione.</p>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════ FILTERS -->
+    <div class="gallery-filters" role="search" aria-label="Filtri galleria">
+      <div class="container">
+        <div class="gallery-filters__group">
+
+          <span class="gallery-filters__label" id="filter-universe-label">Universo</span>
+          <div role="group" aria-labelledby="filter-universe-label">
+            <button class="filter-pill filter-pill--active" data-filter-group="universe" data-filter-value="all">Tutti</button>
+            <button class="filter-pill" data-filter-group="universe" data-filter-value="pokemon">Pokémon</button>
+            <button class="filter-pill" data-filter-group="universe" data-filter-value="magic">Magic</button>
+            <button class="filter-pill" data-filter-group="universe" data-filter-value="yugioh">Yūgiōh</button>
+            <button class="filter-pill" data-filter-group="universe" data-filter-value="sport">Sport</button>
+            <button class="filter-pill" data-filter-group="universe" data-filter-value="cuphead">Cuphead</button>
+          </div>
+
+          <div class="gallery-filters__divider" aria-hidden="true"></div>
+
+          <span class="gallery-filters__label" id="filter-technique-label">Tecnica</span>
+          <div role="group" aria-labelledby="filter-technique-label">
+            <button class="filter-pill filter-pill--active" data-filter-group="technique" data-filter-value="all">Tutte</button>
+            <button class="filter-pill" data-filter-group="technique" data-filter-value="making-of">Making Of</button>
+            <button class="filter-pill" data-filter-group="technique" data-filter-value="special-finishes">Finiture Speciali</button>
+            <button class="filter-pill" data-filter-group="technique" data-filter-value="card-anatomy">Anatomia</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════ BINDER GRID -->
+    <section class="gallery-binder section" aria-labelledby="binder-heading">
+      <div class="container">
+        <h2 id="binder-heading" class="visually-hidden">Raccoglitore delle carte</h2>
+
+        <div class="gallery-binder__layout">
+          <div class="gallery-binder__spine" aria-hidden="true">
+            <div class="gallery-binder__ring"></div>
+            <div class="gallery-binder__ring"></div>
+            <div class="gallery-binder__ring"></div>
+            <div class="gallery-binder__ring"></div>
+            <div class="gallery-binder__ring"></div>
+            <div class="gallery-binder__ring"></div>
+          </div>
+
+          <div class="gallery-binder__pages">
+            <div class="gallery-binder__grid" id="gallery-grid" role="list" aria-label="Carte in galleria">
+              <!-- Populated by gallery.js -->
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════════ MODAL -->
+  <div
+    class="modal-backdrop"
+    id="modal-backdrop"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modal-title"
+    aria-hidden="true"
+  >
+    <div class="modal-wrapper">
+      <button class="modal__close" id="modal-close" aria-label="Chiudi dettagli carta">✕</button>
+      <div class="modal">
+        <div class="modal__image-panel" id="modal-image">
+          <div class="modal__image-placeholder" id="modal-emoji" aria-hidden="true"></div>
+        </div>
+        <div class="modal__content">
+          <div>
+            <span class="badge badge--gold" style="margin-bottom: var(--space-2);">Carta in evidenza</span>
+            <h2 class="modal__title" id="modal-title"></h2>
+            <p class="modal__description" id="modal-desc"></p>
+          </div>
+          <div class="modal__links">
+            <a class="modal__link modal__link--red" id="modal-link-universe" href="#">
+              Vai all'universo →
+            </a>
+            <a class="modal__link modal__link--teal" id="modal-link-technique" href="#">
+              Vai alla tecnica →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════ FOOTER -->
+  <footer class="footer">
+    <div class="footer__container">
+      <a href="index.html" class="footer__logo">Carte da Collezione</a>
+      <nav class="footer__nav" aria-label="Link del footer">
+        <a href="technical/making-of.html">Processo Tecnico</a>
+        <a href="universes/pokemon.html">Universi</a>
+        <a href="gallery.html">Galleria</a>
+      </nav>
+    </div>
+    <div class="footer__container">
+      <p class="footer__copy">Progetto d'esame — Sito informativo sulle carte da collezione</p>
+    </div>
+  </footer>
+
+  <!-- ── Accessibility helper ── -->
+  <style>
+    .visually-hidden {
+      position: absolute;
+      width: 1px; height: 1px;
+      padding: 0; margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+      border: 0;
+    }
+  </style>
+
+  <script src="js/navbar.js"></script>
+  <script src="js/gallery.js"></script>
+
+  <!-- Sync aria-hidden with modal open state -->
+  <script>
+    // Updates aria-hidden on the modal backdrop to match its visual state.
+    const backdrop = document.getElementById('modal-backdrop');
+    const observer = new MutationObserver(() => {
+      const isOpen = backdrop.classList.contains('modal-backdrop--open');
+      backdrop.setAttribute('aria-hidden', String(!isOpen));
+    });
+    observer.observe(backdrop, { attributes: true, attributeFilter: ['class'] });
+  </script>
+</body>
+</html>

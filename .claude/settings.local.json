@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(/usr/bin/python3 --version)",
+      "Bash(/usr/local/bin/python3 --version)",
+      "Read(//usr/bin/**)",
+      "Bash(curl --version)",
+      "Bash(bash /Users/diego/Desktop/SITO_CARTE_COLLEZIONABILI/download_cards.sh)",
+      "Bash(curl -s -A \"CarteDaCollezione/1.0\" \"https://api.pokemontcg.io/v2/cards?q=name:%22Mewtwo-EX%22+set.id:bw4&pageSize=3\")",
+      "Bash(ls -lh /Users/diego/Desktop/SITO_CARTE_COLLEZIONABILI/assets/cards/*.jpg /Users/diego/Desktop/SITO_CARTE_COLLEZIONABILI/assets/cards/*.png)",
+      "Bash(ls -lh /Users/diego/Desktop/SITO_CARTE_COLLEZIONABILI/assets/cards/*.jpg)",
+      "Bash(ls /Users/diego/Desktop/SITO_CARTE_COLLEZIONABILI/assets/cards/*.jpg)",
+      "Bash(curl -sf -A \"Test/1.0\" \"https://api.pokemontcg.io/v2/cards?q=name%3A%22Pikachu+Illustrator%22&pageSize=2\")",
+      "Bash(bash /Users/diego/Desktop/SITO_CARTE_COLLEZIONABILI/download_universe_images.sh)",
+      "Bash(md5 assets/cards/magic-ancestral-recall.jpg assets/universes/magic/ancestral-recall.jpg assets/cards/magic-black-lotus.jpg assets/universes/magic/black-lotus.jpg assets/cards/magic-mox-sapphire.jpg assets/universes/magic/mox-sapphire.jpg)",
+      "Bash(md5 assets/cards/pokemon-blastoise.jpg assets/universes/pokemon/blastoise.jpg assets/cards/pokemon-charizard.jpg assets/universes/pokemon/charizard.jpg assets/cards/pokemon-pikachu-illustrator.jpg assets/universes/pokemon/pikachu-illustrator.jpg assets/cards/pokemon-mewtwo-ex.jpg assets/universes/pokemon/mewtwo.jpg)",
+      "Bash(for f:*)",
+      "Bash(do echo:*)",
+      "Read(//Users/diego/Desktop/SITO_CARTE_COLLEZIONABILI/**)",
+      "Bash(done)"
+    ]
+  }
+}

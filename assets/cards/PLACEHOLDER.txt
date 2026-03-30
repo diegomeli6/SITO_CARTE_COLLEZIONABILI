@@ -1,0 +1,9 @@
+Inserire qui le immagini delle carte per la galleria.
+Nomi suggeriti (corrispondono agli ID in gallery.js):
+  charizard.jpg, pikachu-illustrator.jpg, blastoise.jpg
+  black-lotus.jpg, mox-sapphire.jpg, ragavan.jpg
+  drago-bianco.jpg, dark-magician.jpg, exodia.jpg
+  mickey-mantle.jpg, lebron-rookie.jpg, cuphead-devil.jpg
+  cuphead-king-dice.jpg, mewtwo.jpg, ronaldo-gold.jpg, ancestral-recall.jpg
+
+Formato: JPG o WebP, proporzioni 2.5:3.5 (standard carte), min 400×560 px.

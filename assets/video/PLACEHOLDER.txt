@@ -1,0 +1,2 @@
+Inserire qui il file hero.mp4 (video muto, loop, sfondo hero della home).
+Requisiti: 1920×1080 o superiore, codec H.264, max 10 MB.
