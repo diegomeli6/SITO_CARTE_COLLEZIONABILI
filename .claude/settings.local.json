@@ -18,7 +18,18 @@
       "Bash(do echo:*)",
       "Read(//Users/diego/Desktop/SITO_CARTE_COLLEZIONABILI/**)",
       "Bash(done)",
-      "Bash(grep:*)"
+      "Bash(grep:*)",
+      "Bash(sed -n '988,998p' /Users/diego/Desktop/SITO_CARTE_COLLEZIONABILI/style.css)",
+      "Bash(sed -n '1158,1168p' /Users/diego/Desktop/SITO_CARTE_COLLEZIONABILI/style.css)",
+      "Bash(sed -n '1299,1305p' /Users/diego/Desktop/SITO_CARTE_COLLEZIONABILI/style.css)",
+      "Bash(sed -n '256,262p' /Users/diego/Desktop/SITO_CARTE_COLLEZIONABILI/style.css)",
+      "Bash(sed -n '1798,1812p' /Users/diego/Desktop/SITO_CARTE_COLLEZIONABILI/style.css)",
+      "Bash(sed -n '1829,1875p' /Users/diego/Desktop/SITO_CARTE_COLLEZIONABILI/style.css)",
+      "Bash(sed -n '1936,1946p' /Users/diego/Desktop/SITO_CARTE_COLLEZIONABILI/style.css)",
+      "Bash(sed -n '1125,1148p' /Users/diego/Desktop/SITO_CARTE_COLLEZIONABILI/style.css)",
+      "Bash(sed -n '1198,1210p' /Users/diego/Desktop/SITO_CARTE_COLLEZIONABILI/style.css)",
+      "Bash(sed -n '969,982p' /Users/diego/Desktop/SITO_CARTE_COLLEZIONABILI/style.css)",
+      "Bash(sed -n '1700,1725p' /Users/diego/Desktop/SITO_CARTE_COLLEZIONABILI/style.css)"
     ]
   }
 }

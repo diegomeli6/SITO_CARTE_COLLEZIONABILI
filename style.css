@@ -986,12 +986,8 @@ p {
 /* ── Tech hero ── */
 
 .tech-hero {
-  height: auto;
-  min-height: 140px;
   background-color: var(--teal-light);
-  display: flex;
-  align-items: flex-end;
-  padding-top: var(--space-6);
+  padding-top: calc(60px + var(--space-6));
   padding-bottom: var(--space-6);
   border-bottom: 1px solid var(--color-border);
 }
@@ -1156,11 +1152,7 @@ p {
 /* ── Universe hero ── */
 
 .universe-hero {
-  height: auto;
-  min-height: 160px;
-  display: flex;
-  align-items: flex-end;
-  padding-top: var(--space-6);
+  padding-top: calc(60px + var(--space-6));
   padding-bottom: var(--space-6);
   border-bottom: 1px solid rgba(0,0,0,0.1);
 }
@@ -1788,13 +1780,11 @@ p {
   }
 
   .tech-hero {
-    height: 200px;
-    padding-top: 0;
+    padding-top: calc(60px + var(--space-8));
   }
 
   .universe-hero {
-    height: 240px;
-    padding-top: 0;
+    padding-top: calc(60px + var(--space-8));
   }
 
   .modal {
@@ -1806,10 +1796,6 @@ p {
     border-radius: var(--radius-xl) 0 0 var(--radius-xl);
     max-height: none;
     min-height: 448px;
-  }
-
-  .navbar__hamburger {
-    display: none;
   }
 
   .navbar__menu {
@@ -1839,7 +1825,7 @@ p {
 /* ── Navbar hamburger (mobile < 768px) ── */
 
 .navbar__hamburger {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   gap: 5px;
@@ -1945,10 +1931,34 @@ p {
   }
 }
 
-/* ── Navbar menu hide on mobile ── */
+/* ── Mobile-only overrides (< 768px) ── */
 @media (max-width: 767px) {
   .navbar__menu {
     display: none;
+  }
+
+  .navbar__hamburger {
+    display: flex;
+  }
+
+  /* Binder universo + home — scroll orizzontale come tech-cards */
+  .universe-cards__binder,
+  .home-gallery__binder {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .universe-cards__binder .binder__pages,
+  .home-gallery__binder .binder__pages {
+    display: flex;
+    gap: var(--space-2);
+    padding: var(--space-3);
+  }
+
+  .universe-cards__binder .card-slot,
+  .home-gallery__binder .card-slot {
+    flex-shrink: 0;
+    width: 140px;
   }
 }
 
