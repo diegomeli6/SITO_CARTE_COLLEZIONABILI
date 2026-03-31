@@ -17,7 +17,8 @@
       "Bash(for f:*)",
       "Bash(do echo:*)",
       "Read(//Users/diego/Desktop/SITO_CARTE_COLLEZIONABILI/**)",
-      "Bash(done)"
+      "Bash(done)",
+      "Bash(grep:*)"
     ]
   }
 }
